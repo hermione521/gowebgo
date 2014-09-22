@@ -1,3 +1,1 @@
-this file is not completed yet.
-
-type ```gowebgo -h``` for help.
+this is sample pages for github pages.
