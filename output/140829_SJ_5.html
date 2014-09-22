@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>gowebgo - Test Results</title>
+		<link rel="stylesheet" type="text/css" href="./css/detail.css">
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			google.load("visualization", "1", {packages:["corechart"]});
+			google.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var data, options, chart;
+
+				
+
+				data = google.visualization.arrayToDataTable([
+					
+					['time', 'first view', 'repeat view'],
+					
+					['backend', 0.058000, 0.117000],
+					
+					['start render', 0.000000, 0.000000],
+					
+					['DOM start', 0.779000, 0.498000],
+					
+					['DOM end', 0.795000, 0.514000],
+					
+					['fully loaded', 8.255000, 0.615000],
+					
+				]);
+
+				options = {
+					"title": "Time Summary (seconds)",
+					"width": 600,
+					"height": 400,
+					"fontSize": 14,
+					"legend.textStyle": {fontSize: 12},
+					"titleTextStyle": {fontSize: 16},
+					"slices": {
+						"-1": {}
+						
+					} 
+				};
+
+				chart = new google.visualization.LineChart(document.getElementById("timeSummary"));
+				chart.draw(data, options);
+
+				
+
+				data = google.visualization.arrayToDataTable([
+					
+					['label', 'percentage'],
+					
+					['html', 190789],
+					
+					['js', 646696],
+					
+					['css', 8587],
+					
+					['image', 2204075],
+					
+					['flash', 2589],
+					
+					['font', 0],
+					
+					['other', 6949],
+					
+				]);
+
+				options = {
+					"title": "Average Bytes per Page by Content Type",
+					"width": 600,
+					"height": 400,
+					"fontSize": 14,
+					"legend.textStyle": {fontSize: 12},
+					"titleTextStyle": {fontSize: 16},
+					"slices": {
+						"-1": {}
+						
+						, 0 : { color: "rgb(130,181,252)" }
+						
+						, 1 : { color: "rgb(254,197,132)" }
+						
+						, 2 : { color: "rgb(178,234,148)" }
+						
+						, 3 : { color: "rgb(196,154,232)" }
+						
+						, 4 : { color: "rgb(45,183,193)" }
+						
+						, 5 : { color: "rgb(255,82,62)" }
+						
+						, 6 : { color: "rgb(196,196,196)" }
+						
+					} 
+				};
+
+				chart = new google.visualization.PieChart(document.getElementById("averageBytesPerPageByContentType"));
+				chart.draw(data, options);
+
+				
+
+				data = google.visualization.arrayToDataTable([
+					
+					['label', 'percentage'],
+					
+					['html', 27],
+					
+					['js', 35],
+					
+					['css', 5],
+					
+					['image', 108],
+					
+					['flash', 1],
+					
+					['font', 0],
+					
+					['other', 9],
+					
+				]);
+
+				options = {
+					"title": "Average Requests per Page by Content Type",
+					"width": 600,
+					"height": 400,
+					"fontSize": 14,
+					"legend.textStyle": {fontSize: 12},
+					"titleTextStyle": {fontSize: 16},
+					"slices": {
+						"-1": {}
+						
+						, 0 : { color: "rgb(130,181,252)" }
+						
+						, 1 : { color: "rgb(254,197,132)" }
+						
+						, 2 : { color: "rgb(178,234,148)" }
+						
+						, 3 : { color: "rgb(196,154,232)" }
+						
+						, 4 : { color: "rgb(45,183,193)" }
+						
+						, 5 : { color: "rgb(255,82,62)" }
+						
+						, 6 : { color: "rgb(196,196,196)" }
+						
+					} 
+				};
+
+				chart = new google.visualization.PieChart(document.getElementById("averageRequestsPerPageByContentType"));
+				chart.draw(data, options);
+
+				
+
+				data = google.visualization.arrayToDataTable([
+					
+					['label', 'requests'],
+					
+					['png', 14],
+					
+					['jpeg', 75],
+					
+					['gif', 19],
+					
+					['Other', 1],
+					
+				]);
+
+				options = {
+					"title": "Image Requests by Format",
+					"width": 600,
+					"height": 400,
+					"fontSize": 14,
+					"legend.textStyle": {fontSize: 12},
+					"titleTextStyle": {fontSize: 16},
+					"slices": {
+						"-1": {}
+						
+						, 0 : { color: "rgb(178,234,148)" }
+						
+						, 1 : { color: "rgb(254,197,132)" }
+						
+						, 2 : { color: "rgb(196,154,232)" }
+						
+						, 3 : { color: "rgb(130,181,252)" }
+						
+					} 
+				};
+
+				chart = new google.visualization.PieChart(document.getElementById("imageRequestsByFormat"));
+				chart.draw(data, options);
+
+				
+
+				data = google.visualization.arrayToDataTable([
+					
+					['label', 'requests'],
+					
+					['https', 2],
+					
+					['http', 184],
+					
+					['Other', 0],
+					
+				]);
+
+				options = {
+					"title": "HTTP Requests",
+					"width": 600,
+					"height": 400,
+					"fontSize": 14,
+					"legend.textStyle": {fontSize: 12},
+					"titleTextStyle": {fontSize: 16},
+					"slices": {
+						"-1": {}
+						
+						, 0 : { color: "rgb(178,234,148)" }
+						
+						, 1 : { color: "rgb(254,197,132)" }
+						
+						, 2 : { color: "rgb(130,181,252)" }
+						
+					} 
+				};
+
+				chart = new google.visualization.PieChart(document.getElementById("httpRequests"));
+				chart.draw(data, options);
+
+				
+
+				data = google.visualization.arrayToDataTable([
+					
+					['label', 'requests', { role: 'style' }],
+					
+					['t = 0', 186, 'rgb(130,181,252)'],
+					
+					['0 < t <= 1', 0, 'rgb(178,234,148)'],
+					
+					['1 < t <= 30', 0, 'rgb(196,154,232)'],
+					
+					['30 < t <= 365', 0, 'rgb(254,197,132)'],
+					
+					['t > 365', 0, 'rgb(196, 196, 196)'],
+					
+				]);
+
+				options = {
+					"title": "Cache Lifetime (days)",
+					"width": 600,
+					"height": 400,
+					"fontSize": 14,
+					"legend.textStyle": {fontSize: 12},
+					"titleTextStyle": {fontSize: 16},
+					"slices": {
+						"-1": {}
+						
+					} ,
+					"legend": { position: "none" } 
+				};
+
+				chart = new google.visualization.ColumnChart(document.getElementById("cacheLifetime"));
+				chart.draw(data, options);
+
+				
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Test Result of: http://www.baidu.com</h1>
+		<h2>Info</h2>
+		Test ID: 140829_SJ_5 <br/>
+		Test Location: WPTserver_206 - &lt;b&gt;Firefox&lt;/b&gt; <br/>
+		Test Date: 2014-08-29 16:08 <br />
+		<a href="http://10.58.9.206/result/140829_SJ_5">Webpagetest Result Page</a>
+
+		<h2>Summary</h2>
+		<table>
+			<tr>
+				<th></th>
+				<th>BACKEND</th>
+				<th>START RENDER</th>
+				<th>DOM</th>
+				<th>FULLY LOADED</th>
+				<th>SPEEDINDEX</th>
+			</tr>
+			<tr>
+				<td>First View</td>
+				
+				<td>0.058s</td>
+				<td>0s</td>
+				<td>0.779s ~ 0.795s (0.016s)</td>
+				<td>8.255s</td>
+				<td>0</td>
+				
+			</tr>
+			<tr>
+				<td>Repeat View</td>
+				
+				<td>0.117s</td>
+				<td>0s</td>
+				<td>0.498s ~ 0.514s (0.016s)</td>
+				<td>0.615s</td>
+				<td>0</td>
+				
+			</tr>
+		</table>
+
+		<h2>Charts</h2>
+		
+		<div class="chart">
+			<div id=timeSummary style="width: 600px; height: 400px;"></div>
+		</div>
+		
+		<div class="chart">
+			<div id=averageBytesPerPageByContentType style="width: 600px; height: 400px;"></div>
+		</div>
+		
+		<div class="chart">
+			<div id=averageRequestsPerPageByContentType style="width: 600px; height: 400px;"></div>
+		</div>
+		
+		<div class="chart">
+			<div id=imageRequestsByFormat style="width: 600px; height: 400px;"></div>
+		</div>
+		
+		<div class="chart">
+			<div id=httpRequests style="width: 600px; height: 400px;"></div>
+		</div>
+		
+		<div class="chart">
+			<div id=cacheLifetime style="width: 600px; height: 400px;"></div>
+		</div>
+		
+		<div class="image">
+			<h2>Waterfall of First View</h2>
+			<img src="http://10.58.9.206/results/14/08/29/SJ/5/1_waterfall.png">
+		</div>
+		<div class="image">
+			<h2>Waterfall of Repeat View</h2>
+			<img src="http://10.58.9.206/results/14/08/29/SJ/5/1_Cached_waterfall.png">
+		</div>
+	</body>
+</html>

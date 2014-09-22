@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>gowebgo - Test Results</title>
+		<link rel="stylesheet" type="text/css" href="./css/detail.css">
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			google.load("visualization", "1", {packages:["corechart"]});
+			google.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var data, options, chart;
+
+				{{range .Charts}}
+
+				data = google.visualization.arrayToDataTable([
+					{{range .Data}}
+					{{.}},
+					{{end}}
+				]);
+
+				options = {
+					"title": {{.Title}},
+					"width": 600,
+					"height": 400,
+					"fontSize": 14,
+					"legend.textStyle": {fontSize: 12},
+					"titleTextStyle": {fontSize: 16},
+					"slices": {
+						"-1": {}
+						{{range $index, $element := .Colors}}
+						,{{$index}}: { color: "{{$element}}" }
+						{{end}}
+					} {{if eq .ChartType "ColumnChart"}},
+					"legend": { position: "none" } {{end}}
+				};
+
+				chart = new google.visualization.{{.ChartType}}(document.getElementById({{.CanvasId}}));
+				chart.draw(data, options);
+
+				{{end}}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Test Result of: {{.TestUrl}}</h1>
+		<h2>Info</h2>
+		Test ID: {{.Id}} <br/>
+		Test Location: {{.From}} <br/>
+		Test Date: {{.Date}} <br />
+		<a href="{{.ResultUrl}}">Webpagetest Result Page</a>
+
+		<h2>Summary</h2>
+		<table>
+			<tr>
+				<th></th>
+				<th>BACKEND</th>
+				<th>START RENDER</th>
+				<th>DOM</th>
+				<th>FULLY LOADED</th>
+				<th>SPEEDINDEX</th>
+			</tr>
+			<tr>
+				<td>First View</td>
+				{{with .FirstView}}
+				<td>{{.Backend}}s</td>
+				<td>{{.StartRender}}s</td>
+				<td>{{.DomStart}}s ~ {{.DomEnd}}s ({{printf "%.3f" .DomDelta}}s)</td>
+				<td>{{.FullyLoaded}}s</td>
+				<td>{{.SpeedIndex}}</td>
+				{{end}}
+			</tr>
+			<tr>
+				<td>Repeat View</td>
+				{{with .RepeatView}}
+				<td>{{.Backend}}s</td>
+				<td>{{.StartRender}}s</td>
+				<td>{{.DomStart}}s ~ {{.DomEnd}}s ({{printf "%.3f" .DomDelta}}s)</td>
+				<td>{{.FullyLoaded}}s</td>
+				<td>{{.SpeedIndex}}</td>
+				{{end}}
+			</tr>
+		</table>
+
+		<h2>Charts</h2>
+		{{range .Charts}}
+		<div class="chart">
+			<div id={{.CanvasId}} style="width: 600px; height: 400px;"></div>
+		</div>
+		{{end}}
+		<div class="image">
+			<h2>Waterfall of First View</h2>
+			<img src="{{.FirstWaterfall}}">
+		</div>
+		<div class="image">
+			<h2>Waterfall of Repeat View</h2>
+			<img src="{{.RepeatWaterfall}}">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>gowebgo - Test Results</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/history.css" />
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+	</head>
+	<body>
+		<a href="https://github.com/hermione521/gowebgo">
+			<img style="position: absolute; top: 0; right: 0; border: 0; z-index: 70;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
+		</a>
+		
+		<div id="banner">
+			<img id="logo" src="./image/logo.png"> <span class="logo">GOWEBGO</span>
+			<div class="tags">
+				<p class="alignLeft">http://www.baidu.com</p>
+				<p class="alignRight">
+					<a id="BackendTag" class="tag">BACKEND</a> | 
+					<a id="StartRenderTag" class="tag">START RENDER</a> |
+					<a id="DomDeltaTag" class="tag">DOM</a> | 
+					<a id="FullyLoadedTag" class="tag">FULLY LOADED</a> | 
+					<a id="SpeedIndexTag" class="tag">SPEEDINDEX</a>
+				</p>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+
+		<div id="StartRender" class="highchart"></div>
+
+		<div id="DomDelta" class="highchart"></div>
+
+		<div id="FullyLoaded" class="highchart"></div>
+
+		<div id="SpeedIndex" class="highchart"></div>
+		
+		<div id="Backend" class="highchart"></div>
+
+		<div class="compare">
+			<img id="compare" src="" title="latest browser comparation">
+		</div>
+
+		<div class="more">
+			<a id="more" href="">More history<br/>results...</a>
+		</div>
+
+		<script type="text/javascript" src="./js/highcharts.js"></script>
+		<script type="text/javascript" src="./js/dark_unica.js"></script>
+		<script type="text/javascript">
+			var originData = [{"ClusterId":"testScriptA20140829121512","ChromeData":{"Id":"140829_CR_1","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eChrome\u003c/b\u003e","Date":"2014-08-29 12:15","FirstView":{"Backend":0.067,"StartRender":0,"DomStart":0.565,"DomEnd":0.585,"DomDelta":0.02,"FullyLoaded":0.877,"SpeedIndex":0},"RepeatView":{"Backend":0.048,"StartRender":0,"DomStart":0.34,"DomEnd":0.354,"DomDelta":0.013,"FullyLoaded":0.477,"SpeedIndex":0},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"FirefoxData":{"Id":"140829_TB_2","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eFirefox\u003c/b\u003e","Date":"2014-08-29 12:16","FirstView":{"Backend":0.132,"StartRender":0,"DomStart":0.625,"DomEnd":0.644,"DomDelta":0.019,"FullyLoaded":0.822,"SpeedIndex":0},"RepeatView":{"Backend":0.033,"StartRender":0,"DomStart":0.62,"DomEnd":0.644,"DomDelta":0.024,"FullyLoaded":0.859,"SpeedIndex":0},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"IEData":{"Id":"140829_9J_3","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eIE\u003c/b\u003e","Date":"2014-08-29 12:17","FirstView":{"Backend":0,"StartRender":0,"DomStart":0,"DomEnd":0,"DomDelta":0,"FullyLoaded":0,"SpeedIndex":0},"RepeatView":{"Backend":0,"StartRender":0,"DomStart":0,"DomEnd":0,"DomDelta":0,"FullyLoaded":0,"SpeedIndex":0},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""}},{"ClusterId":"testScriptA20140829160736","ChromeData":{"Id":"140829_80_4","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eChrome\u003c/b\u003e","Date":"2014-08-29 16:07","FirstView":{"Backend":0.037,"StartRender":0,"DomStart":0.436,"DomEnd":0.454,"DomDelta":0.018,"FullyLoaded":0.642,"SpeedIndex":0},"RepeatView":{"Backend":0.051,"StartRender":0,"DomStart":0.449,"DomEnd":0.468,"DomDelta":0.019,"FullyLoaded":0.615,"SpeedIndex":0},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"FirefoxData":{"Id":"140829_SJ_5","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eFirefox\u003c/b\u003e","Date":"2014-08-29 16:08","FirstView":{"Backend":0.058,"StartRender":0,"DomStart":0.779,"DomEnd":0.795,"DomDelta":0.016,"FullyLoaded":8.255,"SpeedIndex":0},"RepeatView":{"Backend":0.117,"StartRender":0,"DomStart":0.498,"DomEnd":0.514,"DomDelta":0.016,"FullyLoaded":0.615,"SpeedIndex":0},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"IEData":{"Id":"140829_04_6","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eIE\u003c/b\u003e","Date":"2014-08-29 16:09","FirstView":{"Backend":0,"StartRender":0,"DomStart":0,"DomEnd":0,"DomDelta":0,"FullyLoaded":0,"SpeedIndex":0},"RepeatView":{"Backend":0,"StartRender":0,"DomStart":0,"DomEnd":0,"DomDelta":0,"FullyLoaded":0,"SpeedIndex":0},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""}},{"ClusterId":"testScriptA20140901121652","ChromeData":{"Id":"140901_HZ_1","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eChrome\u003c/b\u003e","Date":"2014-09-01 12:17","FirstView":{"Backend":0.036,"StartRender":0.474,"DomStart":0.575,"DomEnd":0.592,"DomDelta":0.017,"FullyLoaded":0.731,"SpeedIndex":506},"RepeatView":{"Backend":0.046,"StartRender":0.271,"DomStart":0.41,"DomEnd":0.437,"DomDelta":0.027,"FullyLoaded":5.143,"SpeedIndex":556},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"FirefoxData":{"Id":"140901_ED_2","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eFirefox\u003c/b\u003e","Date":"2014-09-01 12:17","FirstView":{"Backend":0.034,"StartRender":0.556,"DomStart":0.421,"DomEnd":0.438,"DomDelta":0.017,"FullyLoaded":0.591,"SpeedIndex":610},"RepeatView":{"Backend":0.035,"StartRender":0.546,"DomStart":0.435,"DomEnd":0.451,"DomDelta":0.016,"FullyLoaded":0.541,"SpeedIndex":511},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"IEData":{"Id":"140901_ZN_3","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eIE\u003c/b\u003e","Date":"2014-09-01 12:18","FirstView":{"Backend":0.053,"StartRender":0.389,"DomStart":0.317,"DomEnd":0.34,"DomDelta":0.023,"FullyLoaded":0.504,"SpeedIndex":416},"RepeatView":{"Backend":0.128,"StartRender":0.477,"DomStart":0.346,"DomEnd":0.364,"DomDelta":0.018,"FullyLoaded":0.472,"SpeedIndex":500},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""}},{"ClusterId":"testScriptA20140912113441","ChromeData":{"Id":"140912_2X_1","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eChrome\u003c/b\u003e","Date":"2014-09-12 11:35","FirstView":{"Backend":0.051,"StartRender":0,"DomStart":1.084,"DomEnd":1.109,"DomDelta":0.024,"FullyLoaded":1.356,"SpeedIndex":0},"RepeatView":{"Backend":0.055,"StartRender":0,"DomStart":0.42,"DomEnd":0.435,"DomDelta":0.015,"FullyLoaded":0.516,"SpeedIndex":0},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"FirefoxData":{"Id":"140912_WS_2","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eFirefox\u003c/b\u003e","Date":"2014-09-12 11:35","FirstView":{"Backend":0.039,"StartRender":0.577,"DomStart":0.623,"DomEnd":0.643,"DomDelta":0.02,"FullyLoaded":0.8,"SpeedIndex":651},"RepeatView":{"Backend":0.033,"StartRender":0.583,"DomStart":0.525,"DomEnd":0.551,"DomDelta":0.026,"FullyLoaded":0.687,"SpeedIndex":613},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"IEData":{"Id":"140912_QM_3","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eIE\u003c/b\u003e","Date":"2014-09-12 11:36","FirstView":{"Backend":0.061,"StartRender":1.492,"DomStart":1.524,"DomEnd":1.575,"DomDelta":0.05,"FullyLoaded":1.995,"SpeedIndex":1520},"RepeatView":{"Backend":0.064,"StartRender":0.583,"DomStart":0.345,"DomEnd":0.375,"DomDelta":0.03,"FullyLoaded":0.498,"SpeedIndex":600},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""}},{"ClusterId":"testScriptA20140912113734","ChromeData":{"Id":"140912_SB_4","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eChrome\u003c/b\u003e","Date":"2014-09-12 11:38","FirstView":{"Backend":0.043,"StartRender":0.284,"DomStart":0.65,"DomEnd":0.678,"DomDelta":0.028,"FullyLoaded":0.981,"SpeedIndex":519},"RepeatView":{"Backend":0.144,"StartRender":0.377,"DomStart":0.681,"DomEnd":0.706,"DomDelta":0.024,"FullyLoaded":0.808,"SpeedIndex":581},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"FirefoxData":{"Id":"140912_NV_5","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eFirefox\u003c/b\u003e","Date":"2014-09-12 11:38","FirstView":{"Backend":0.031,"StartRender":0.183,"DomStart":0.784,"DomEnd":0.804,"DomDelta":0.02,"FullyLoaded":1.094,"SpeedIndex":516},"RepeatView":{"Backend":0.037,"StartRender":0.585,"DomStart":0.435,"DomEnd":0.452,"DomDelta":0.017,"FullyLoaded":0.603,"SpeedIndex":610},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""},"IEData":{"Id":"140912_6F_6","ResultUrl":"","TestUrl":"http://www.baidu.com","From":"WPTserver_206 - \u003cb\u003eIE\u003c/b\u003e","Date":"2014-09-12 11:41","FirstView":{"Backend":0.051,"StartRender":0.477,"DomStart":0.315,"DomEnd":0.343,"DomDelta":0.028,"FullyLoaded":0.527,"SpeedIndex":500},"RepeatView":{"Backend":0.138,"StartRender":0.594,"DomStart":0.407,"DomEnd":0.427,"DomDelta":0.02,"FullyLoaded":0.54,"SpeedIndex":602},"Charts":null,"FirstWaterfall":"","RepeatWaterfall":""}}];
+			var wptUrl = "http://10.58.9.206";
+		</script>
+		<script type="text/javascript" src="./js/history.js"></script>
+	</body>
+</html>
